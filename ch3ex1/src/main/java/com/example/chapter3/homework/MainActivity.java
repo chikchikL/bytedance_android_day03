@@ -1,5 +1,6 @@
 package com.example.chapter3.homework;
 
+import android.graphics.Path;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.CheckBox;
@@ -44,7 +45,12 @@ public class MainActivity extends AppCompatActivity {
                 // 提示1：可以参考 https://airbnb.io/lottie/android/android.html#custom-animators
                 // 提示2：SeekBar 的文档可以把鼠标放在 OnProgressChanged 中间，并点击 F1 查看，
                 // 或者到官网查询 https://developer.android.com/reference/android/widget/SeekBar.OnSeekBarChangeListener.html#onProgressChanged(android.widget.SeekBar,%20int,%20boolean)
+
+                /*
+                * 通过seekBar的当前进度/最大进度计算animation进度0.0f-1.0f
+                * */
                 animationView.setProgress((progress+0.0f)/seekBar.getMax());
+
             }
 
             @Override
